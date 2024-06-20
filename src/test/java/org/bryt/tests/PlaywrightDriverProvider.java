@@ -2,6 +2,7 @@ package org.bryt.tests;
 
 import com.codeborne.selenide.WebDriverProvider;
 import org.brit.driver.PlaywrightiumDriver;
+import org.brit.emulation.Device;
 import org.brit.options.PlaywrightiumOptions;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -18,8 +19,8 @@ public class PlaywrightDriverProvider implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         PlaywrightiumOptions playwrightiumOptions = new PlaywrightiumOptions();
         playwrightiumOptions.setHeadless(false);
-        playwrightiumOptions.setBrowserName("chromium");
-        playwrightiumOptions.setRecordVideo(true);
+        playwrightiumOptions.setBrowserName("webkit");
+       // playwrightiumOptions.setRecordVideo(true);
         return new PlaywrightiumDriver(playwrightiumOptions);
     }
 }

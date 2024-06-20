@@ -31,6 +31,7 @@ public class PlaywrightiumSelenideTests {
     @BeforeClass
     public void beforeClass() {
         Configuration.baseUrl = "https://the-internet.herokuapp.com";
+        //Configuration.browser = PlaywrightDriverProvider.class.getName();
         Configuration.browser = PlaywrightDriverRemoteProvider.class.getName();
     }
 

@@ -30,12 +30,6 @@ public class SelenideTests {
     @BeforeClass
     public void beforeClass() {
         Configuration.baseUrl = "https://the-internet.herokuapp.com";
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setExperimentalOption("prefs",
-                Map.of("credentials_enable_service", false,
-                        "profile.password_manager_enabled", false)
-        );
-        Configuration.browserCapabilities = chromeOptions;
     }
 
 
